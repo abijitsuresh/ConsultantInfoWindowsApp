@@ -19,18 +19,27 @@ namespace PioneerTechConsultancySystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            string loginId = LoginIdTextBox.Text;
-            string password = PasswordTextBox.Text;
+            EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
+            this.Hide();
+            EmployeeDetailsObj.Show();
 
-            if (loginId.Equals("admin") && password.Equals("abc@123"))
-            {
-                MessageBox.Show("Login Success");
-                this.Hide();
-                EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
-                EmployeeDetailsObj.Show();
-            }
-            else
-                MessageBox.Show("Login Failed. Enter Correct details.");
+            //string loginId = LoginIdTextBox.Text;
+            //string password = PasswordTextBox.Text;
+
+            //if (loginId.Equals("admin") && password.Equals("abc@123"))
+            //{
+            //    MessageBox.Show("Login Success");
+            //    this.Hide();
+            //    EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
+            //    EmployeeDetailsObj.Show();
+            //}
+            //else
+            //    MessageBox.Show("Login Failed. Enter Correct details.");
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
