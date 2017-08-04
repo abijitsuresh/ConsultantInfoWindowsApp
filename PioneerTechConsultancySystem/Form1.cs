@@ -25,8 +25,9 @@ namespace ConsultancyApp1
             if (loginId.Equals("admin") && password.Equals("abc@123"))
             {
                 MessageBox.Show("Login Success");
-                ConsultantPersonalInformation ConsultantPersonalInformationObj = new ConsultantPersonalInformation();
-                ConsultantPersonalInformationObj.Show();
+                this.Hide();
+                EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
+                EmployeeDetailsObj.Show();
             }
             else
                 MessageBox.Show("Login Failed. Enter Correct details.");

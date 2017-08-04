@@ -140,6 +140,7 @@
             this.Controls.Add(this.HeaderLbl);
             this.Name = "ConsultantPersonalInformation";
             this.Text = "ConsultantPersonalInformation";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConsultantPersonalInformation_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

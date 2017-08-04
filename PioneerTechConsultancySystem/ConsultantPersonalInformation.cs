@@ -34,5 +34,11 @@ namespace ConsultancyApp1
             else
                 MessageBox.Show(retValue);
         }
+
+        private void ConsultantPersonalInformation_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+        }
     }
 }

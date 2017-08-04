@@ -89,7 +89,7 @@
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.LoginIdLabel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Pioneer Tech Consultancy System";
             this.ResumeLayout(false);
             this.PerformLayout();
 
