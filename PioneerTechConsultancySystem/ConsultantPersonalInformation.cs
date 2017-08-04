@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConsultancyApp1
+namespace PioneerTechConsultancySystem
 {
     public partial class ConsultantPersonalInformation : Form
     {

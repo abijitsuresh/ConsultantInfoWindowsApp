@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConsultancyApp1.Properties
+namespace PioneerTechConsultancySystem.Properties
 {
 
 

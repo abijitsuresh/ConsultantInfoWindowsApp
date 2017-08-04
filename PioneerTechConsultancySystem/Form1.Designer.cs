@@ -1,4 +1,4 @@
-﻿namespace ConsultancyApp1
+﻿namespace PioneerTechConsultancySystem
 {
     partial class Form1
     {
