@@ -19,22 +19,22 @@ namespace PioneerTechConsultancySystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
-            this.Hide();
-            EmployeeDetailsObj.Show();
+            //EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
+            //this.Hide();
+            //EmployeeDetailsObj.Show();
 
-            //string loginId = LoginIdTextBox.Text;
-            //string password = PasswordTextBox.Text;
+            string loginId = LoginIdTextBox.Text;
+            string password = PasswordTextBox.Text;
 
-            //if (loginId.Equals("admin") && password.Equals("abc@123"))
-            //{
-            //    MessageBox.Show("Login Success");
-            //    this.Hide();
-            //    EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
-            //    EmployeeDetailsObj.Show();
-            //}
-            //else
-            //    MessageBox.Show("Login Failed. Enter Correct details.");
+            if (loginId.Equals("admin") && password.Equals("abc@123"))
+            {
+                MessageBox.Show("Login Success");
+                this.Hide();
+                HomeScreen HomeScreenObj = new HomeScreen();
+                HomeScreenObj.Show();                
+            }
+            else
+                MessageBox.Show("Login Failed. Enter Correct details.");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

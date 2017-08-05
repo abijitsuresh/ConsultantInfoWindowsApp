@@ -33,6 +33,7 @@
             this.LoginIdTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LoginIdLabel
@@ -78,11 +79,21 @@
             this.LoginBtn.UseVisualStyleBackColor = true;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(129, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Enter Login Details to continue";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 474);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.LoginIdTextBox);
@@ -103,6 +114,7 @@
         private System.Windows.Forms.TextBox LoginIdTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
