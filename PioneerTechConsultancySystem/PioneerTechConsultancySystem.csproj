@@ -53,6 +53,12 @@
     <Compile Include="ConsultantPersonalInformation.Designer.cs">
       <DependentUpon>ConsultantPersonalInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayEmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayEmployeeDetails.Designer.cs">
+      <DependentUpon>DisplayEmployeeDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,10 +79,18 @@
     </Compile>
     <Compile Include="InsertConsultantDetails.cs" />
     <Compile Include="InsertConsultantDetailsController.cs" />
+    <Compile Include="PioneerTechConsultancySystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PioneerTechConsultancySystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConsultantPersonalInformation.resx">
       <DependentUpon>ConsultantPersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayEmployeeDetails.resx">
+      <DependentUpon>DisplayEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
@@ -97,6 +111,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="PioneerTechConsultancySystemDataSet.xsc">
+      <DependentUpon>PioneerTechConsultancySystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PioneerTechConsultancySystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PioneerTechConsultancySystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PioneerTechConsultancySystemDataSet.xss">
+      <DependentUpon>PioneerTechConsultancySystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
