@@ -27,7 +27,7 @@ namespace PioneerTechConsultancySystem
         private void HomeScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            Form1 form1 = new Form1();
+            LoginScreen form1 = new LoginScreen();
             form1.Show();
         }
 

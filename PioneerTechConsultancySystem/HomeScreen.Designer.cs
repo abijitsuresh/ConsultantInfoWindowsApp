@@ -60,7 +60,7 @@
             this.Controls.Add(this.SearchEmployeeDetailsButton);
             this.Controls.Add(this.InsertHomeButton);
             this.Name = "HomeScreen";
-            this.Text = "HomeScreen";
+            this.Text = "Pioneer Tech Consultancy System - Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeScreen_FormClosed);
             this.ResumeLayout(false);
 

@@ -137,7 +137,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "DisplayEmployeeDetails";
-            this.Text = "DisplayEmployeeDetails";
+            this.Text = "Pioneer Tech Consultancy System - Employee Dashboard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisplayEmployeeDetails_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.PersonalDetailsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyDetailsGridView)).EndInit();

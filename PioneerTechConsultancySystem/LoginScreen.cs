@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PioneerTechSystem.DAL;
 
 namespace PioneerTechConsultancySystem
 {
-    public partial class Form1 : Form
+    public partial class LoginScreen : Form
     {
-        public Form1()
+        public LoginScreen()
         {
             InitializeComponent();
         }
@@ -26,7 +27,9 @@ namespace PioneerTechConsultancySystem
             string loginId = LoginIdTextBox.Text;
             string password = PasswordTextBox.Text;
 
-            if (loginId.Equals("admin") && password.Equals("abc@123"))
+            EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();            
+            
+            if (EmployeeDataAccessLayerObj.loginCheck(loginId, password) == 1)
             {
                 MessageBox.Show("Login Success");
                 this.Hide();

@@ -9,31 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PioneerTechSystem.DAL;
 
 namespace PioneerTechConsultancySystem
 {
     public partial class DisplayEmployeeDetails : Form
     {
-        private SqlConnection sqlCon;
-        //private SqlCommand sqlCmd;
-        private string ConnectionString;
-        private SqlDataAdapter PersonalDetails, CompanyDetails, ProjectDetails;
-        private DataTable PersonalDataTable, CompanyDataTable, ProjectDataTable;
-
         private void SearchButton_Click(object sender, EventArgs e)
         {
             var height = 0;
-            ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
             string EmployeeID = SearchIDTextBox.Text.ToString();
             try
             {
-                sqlCon = new SqlConnection(ConnectionString);
-                sqlCon.Open();
-
-                PersonalDataTable = new DataTable();
-                PersonalDetails = new SqlDataAdapter("SELECT FirstName, LastName, EmailID, MobileNumber, AddressState as State FROM EmployeePersonalDetails where EmployeeID = '" + EmployeeID + "'", sqlCon);
-                PersonalDetails.Fill(PersonalDataTable);
-                PersonalDetailsGridView.DataSource = PersonalDataTable;
+                EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();
+                PersonalDetailsGridView.DataSource = EmployeeDataAccessLayerObj.ViewConsultantData(EmployeeID, "DisplayPersonal");
                 height = 25;
                 foreach (DataGridViewRow dr in PersonalDetailsGridView.Rows)
                 {
@@ -42,10 +31,7 @@ namespace PioneerTechConsultancySystem
                 PersonalDetailsGridView.Height = height;
                 height = 0;
 
-                CompanyDataTable = new DataTable();
-                CompanyDetails = new SqlDataAdapter("SELECT CompanyName as [Company Name], CompanyContactNumber as [Company Contact Number], CompanyLocation as Location, CompanyWebsite as Website FROM EmployeeCompanyDetails where EmployeeID = '" + EmployeeID + "'", sqlCon);
-                CompanyDetails.Fill(CompanyDataTable);
-                CompanyDetailsGridView.DataSource = CompanyDataTable;
+                CompanyDetailsGridView.DataSource = EmployeeDataAccessLayerObj.ViewConsultantData(EmployeeID, "DisplayCompany"); ;
                 height = 25;
                 foreach (DataGridViewRow dr in CompanyDetailsGridView.Rows)
                 {
@@ -53,11 +39,8 @@ namespace PioneerTechConsultancySystem
                 }
                 CompanyDetailsGridView.Height = height;
                 height = 0;
-
-                ProjectDataTable = new DataTable();
-                ProjectDetails = new SqlDataAdapter("SELECT ProjectName as [Project Name], ClientName as [Client Name], ProjectLocation as [Project Location], ProjectRoles as [Project Roles] FROM EmployeeProjectDetails where EmployeeID = '" + EmployeeID + "'", sqlCon);
-                ProjectDetails.Fill(ProjectDataTable);
-                ProjectDetailsGridView.DataSource = ProjectDataTable;
+                
+                ProjectDetailsGridView.DataSource = EmployeeDataAccessLayerObj.ViewConsultantData(EmployeeID, "DisplayProject");
                 height = 25;
                 foreach (DataGridViewRow dr in ProjectDetailsGridView.Rows)
                 {
@@ -69,10 +52,6 @@ namespace PioneerTechConsultancySystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                sqlCon.Close();
             }
         }
 

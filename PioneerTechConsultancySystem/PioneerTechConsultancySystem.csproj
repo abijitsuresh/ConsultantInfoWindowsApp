@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultantPersonalInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultantPersonalInformation.Designer.cs">
-      <DependentUpon>ConsultantPersonalInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="DisplayEmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +59,11 @@
     <Compile Include="EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeScreen.cs">
       <SubType>Form</SubType>
@@ -77,21 +71,16 @@
     <Compile Include="HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsertConsultantDetails.cs" />
-    <Compile Include="InsertConsultantDetailsController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConsultantPersonalInformation.resx">
-      <DependentUpon>ConsultantPersonalInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DisplayEmployeeDetails.resx">
       <DependentUpon>DisplayEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
@@ -118,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PioneerTechSystem.DAL\PioneerTechSystem.DAL.csproj">
+      <Project>{4379d4af-7347-4ecf-92d8-451991a35c52}</Project>
+      <Name>PioneerTechSystem.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
