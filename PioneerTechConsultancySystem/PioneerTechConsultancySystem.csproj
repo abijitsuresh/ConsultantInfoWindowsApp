@@ -53,6 +53,12 @@
     <Compile Include="ConsultantPersonalInformation.Designer.cs">
       <DependentUpon>ConsultantPersonalInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayEmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayEmployeeDetails.Designer.cs">
+      <DependentUpon>DisplayEmployeeDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConsultantPersonalInformation.resx">
       <DependentUpon>ConsultantPersonalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayEmployeeDetails.resx">
+      <DependentUpon>DisplayEmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>

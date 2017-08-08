@@ -30,5 +30,12 @@ namespace PioneerTechConsultancySystem
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void SearchEmployeeDetailsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DisplayEmployeeDetails DisplayScreen = new DisplayEmployeeDetails();
+            DisplayScreen.Show();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.InsertHomeButton = new System.Windows.Forms.Button();
+            this.SearchEmployeeDetailsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InsertHomeButton
@@ -41,11 +42,22 @@
             this.InsertHomeButton.UseVisualStyleBackColor = true;
             this.InsertHomeButton.Click += new System.EventHandler(this.InsertHomeButton_Click);
             // 
+            // SearchEmployeeDetailsButton
+            // 
+            this.SearchEmployeeDetailsButton.Location = new System.Drawing.Point(188, 166);
+            this.SearchEmployeeDetailsButton.Name = "SearchEmployeeDetailsButton";
+            this.SearchEmployeeDetailsButton.Size = new System.Drawing.Size(201, 27);
+            this.SearchEmployeeDetailsButton.TabIndex = 1;
+            this.SearchEmployeeDetailsButton.Text = "Search Employee Details";
+            this.SearchEmployeeDetailsButton.UseVisualStyleBackColor = true;
+            this.SearchEmployeeDetailsButton.Click += new System.EventHandler(this.SearchEmployeeDetailsButton_Click);
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 423);
+            this.Controls.Add(this.SearchEmployeeDetailsButton);
             this.Controls.Add(this.InsertHomeButton);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button InsertHomeButton;
+        private System.Windows.Forms.Button SearchEmployeeDetailsButton;
     }
 }
