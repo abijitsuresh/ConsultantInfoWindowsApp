@@ -26,8 +26,7 @@ namespace PioneerTechConsultancySystem
             CourseYearOfPassing = CourseYearTextBox.Text;
             try
             {
-                EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();                
-
+                EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();  
                 string status = EmployeeDataAccessLayerObj.InsertConsultantDetails(FName, LName, EmailID, MobileNumber, AlternateMobileNumber, AddressLine1, AddressLine2, State, Country, ZipCode, HomeCountry, CompanyName, CompanyContactNumber, CompanyLocation, CompanyWebsite, ProgrammingLanguages, Databases, ORMTechnologies, UITechnologies, ProjectName, ClientName, ProjectLocation, ProjectRoles, CourseType, CourseSpecification, CourseYearOfPassing);
                 if(status.Equals("success"))
                 {
