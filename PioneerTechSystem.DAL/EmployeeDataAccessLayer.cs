@@ -95,8 +95,6 @@ namespace PioneerTechSystem.DAL
                 string returnValue = returnMessage.Value.ToString();
                 sqlCommand.Dispose();
                 return returnValue;
-
-                //return "success";
             }
             catch (Exception ex)
             {
