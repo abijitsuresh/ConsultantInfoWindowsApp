@@ -3766,7 +3766,7 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>1143310607</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>1143310607</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>1143312655</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.PioneerTech.com</td><td>0</td><td/><td>1143276751</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.pioneertechinc.com</td><td>0</td><td/><td>1143288626</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>PioneerTech</td><td>0</td><td/><td>1143276751</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>PioneerTechConsultancySystem.exe</td><td>0</td><td/><td>1143329839</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1143310607</td></row>
