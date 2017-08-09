@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PioneerTechSystem.Models;
 
 namespace PioneerTechSystem.DAL
 {
@@ -14,7 +15,10 @@ namespace PioneerTechSystem.DAL
         private SqlConnection sqlConnection;
         private SqlCommand sqlCommand;
         private SqlDataAdapter DataAdapter;
-        private DataTable dataTable;      
+        private DataTable dataTable;
+        public List<Employee> EmployeeData;
+        public List<Company> CompanyData;
+        public List<Project> ProjectData;
 
         // Opening Connection
         private SqlConnection OpenConnection()
@@ -30,11 +34,11 @@ namespace PioneerTechSystem.DAL
             sqlConnection.Close();
         }
 
-        //Checking Login
-        public int loginCheck(string LoginID, string password)
+        // Checking Login
+        public int loginCheck(Login LoginObj)
         {
             int returnValue = 0;
-            if (LoginID.Equals("admin") && password.Equals("abc@123"))
+            if (LoginObj.LoginID.Equals("admin") && LoginObj.Password.Equals("abc@123"))
             {
                 returnValue = 1;
             }
@@ -45,44 +49,43 @@ namespace PioneerTechSystem.DAL
         }
 
         // Insert Consultant Values
-        public string InsertConsultantDetails(string FName, string LName, string EmailID, string MobileNumber, string AlternateMobileNumber, string AddressLine1, string AddressLine2, string State, string Country, string ZipCode, string HomeCountry, string CompanyName, string CompanyContactNumber, string CompanyLocation, string CompanyWebsite, string PgmLanguages, string Databases, string ORMTechnologies, string UITechnologies, string ProjectName, string ClientName, string ProjectLocation, string ProjectRoles, string CourseType, string CourseSpecialization, string CourseYear)
+        public string InsertConsultantDetails(Employee EmployeeObj, Project ProjectObj, Company CompanyObj, Technical TechnicalObj, Educational EducationalObj)
         {
             
             try
             {
                 sqlConnection = OpenConnection();
-
                 sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.CommandText = "uspInsertDetails";
 
-                sqlCommand.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FName;
-                sqlCommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = LName;
-                sqlCommand.Parameters.Add("@EmailID", SqlDbType.VarChar).Value = EmailID;
-                sqlCommand.Parameters.Add("@MobileNumber", SqlDbType.VarChar).Value = MobileNumber;
-                sqlCommand.Parameters.Add("@AlternateMobileNumber", SqlDbType.VarChar).Value = AlternateMobileNumber;
-                sqlCommand.Parameters.Add("@AddressLine1", SqlDbType.VarChar).Value = AddressLine1;
-                sqlCommand.Parameters.Add("@AddressLine2", SqlDbType.VarChar).Value = AddressLine2;
-                sqlCommand.Parameters.Add("@State", SqlDbType.VarChar).Value = State;
-                sqlCommand.Parameters.Add("@Country", SqlDbType.VarChar).Value = Country;
-                sqlCommand.Parameters.Add("@ZipCode", SqlDbType.VarChar).Value = ZipCode;
-                sqlCommand.Parameters.Add("@HomeCountry", SqlDbType.VarChar).Value = HomeCountry;
-                sqlCommand.Parameters.Add("@ProjectName", SqlDbType.VarChar).Value = ProjectName;
-                sqlCommand.Parameters.Add("@ClientName", SqlDbType.VarChar).Value = ClientName;
-                sqlCommand.Parameters.Add("@ProjectLocation", SqlDbType.VarChar).Value = ProjectLocation;
-                sqlCommand.Parameters.Add("@ProjectRoles", SqlDbType.VarChar).Value = ProjectRoles;
-                sqlCommand.Parameters.Add("@CompanyName", SqlDbType.VarChar).Value = CompanyName;
-                sqlCommand.Parameters.Add("@CompanyContactNumber", SqlDbType.VarChar).Value = CompanyContactNumber;
-                sqlCommand.Parameters.Add("@CompanyLocation", SqlDbType.VarChar).Value = CompanyLocation;
-                sqlCommand.Parameters.Add("@CompanyWebsite", SqlDbType.VarChar).Value = CompanyWebsite;
-                sqlCommand.Parameters.Add("@ProgrammingLanguages", SqlDbType.VarChar).Value = PgmLanguages;
-                sqlCommand.Parameters.Add("@Databases", SqlDbType.VarChar).Value = Databases;
-                sqlCommand.Parameters.Add("@ORMTechnologies", SqlDbType.VarChar).Value = ORMTechnologies;
-                sqlCommand.Parameters.Add("@UITechnologies", SqlDbType.VarChar).Value = UITechnologies;
-                sqlCommand.Parameters.Add("@CourseType", SqlDbType.VarChar).Value = CourseType;
-                sqlCommand.Parameters.Add("@CourseSpecialization", SqlDbType.VarChar).Value = CourseSpecialization;
-                sqlCommand.Parameters.Add("@CourseYear", SqlDbType.VarChar).Value = CourseType;
+                sqlCommand.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = EmployeeObj.FirstName;
+                sqlCommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = EmployeeObj.LastName;
+                sqlCommand.Parameters.Add("@EmailID", SqlDbType.VarChar).Value = EmployeeObj.EmailID;
+                sqlCommand.Parameters.Add("@MobileNumber", SqlDbType.VarChar).Value = EmployeeObj.MobileNumber;
+                sqlCommand.Parameters.Add("@AlternateMobileNumber", SqlDbType.VarChar).Value = EmployeeObj.AlternateMobileNumber;
+                sqlCommand.Parameters.Add("@AddressLine1", SqlDbType.VarChar).Value = EmployeeObj.AddressLine1;
+                sqlCommand.Parameters.Add("@AddressLine2", SqlDbType.VarChar).Value = EmployeeObj.AddressLine2;
+                sqlCommand.Parameters.Add("@State", SqlDbType.VarChar).Value = EmployeeObj.AddressState;
+                sqlCommand.Parameters.Add("@Country", SqlDbType.VarChar).Value = EmployeeObj.AddressCountry;
+                sqlCommand.Parameters.Add("@ZipCode", SqlDbType.VarChar).Value = EmployeeObj.AddressZipCode;
+                sqlCommand.Parameters.Add("@HomeCountry", SqlDbType.VarChar).Value = EmployeeObj.HomeCountry;
+                sqlCommand.Parameters.Add("@ProjectName", SqlDbType.VarChar).Value = ProjectObj.ProjectName;
+                sqlCommand.Parameters.Add("@ClientName", SqlDbType.VarChar).Value = ProjectObj.ClientName;
+                sqlCommand.Parameters.Add("@ProjectLocation", SqlDbType.VarChar).Value = ProjectObj.ProjectLocation;
+                sqlCommand.Parameters.Add("@ProjectRoles", SqlDbType.VarChar).Value = ProjectObj.ProjectRoles;
+                sqlCommand.Parameters.Add("@CompanyName", SqlDbType.VarChar).Value = CompanyObj.CompanyName;
+                sqlCommand.Parameters.Add("@CompanyContactNumber", SqlDbType.VarChar).Value = CompanyObj.CompanyContactNumber;
+                sqlCommand.Parameters.Add("@CompanyLocation", SqlDbType.VarChar).Value = CompanyObj.CompanyLocation;
+                sqlCommand.Parameters.Add("@CompanyWebsite", SqlDbType.VarChar).Value = CompanyObj.CompanyWebsite;
+                sqlCommand.Parameters.Add("@ProgrammingLanguages", SqlDbType.VarChar).Value = TechnicalObj.ProgrammingLanguages;
+                sqlCommand.Parameters.Add("@Databases", SqlDbType.VarChar).Value = TechnicalObj.DatabasesKnown;
+                sqlCommand.Parameters.Add("@ORMTechnologies", SqlDbType.VarChar).Value = TechnicalObj.ORMTechnologies;
+                sqlCommand.Parameters.Add("@UITechnologies", SqlDbType.VarChar).Value = TechnicalObj.UITechnologies;
+                sqlCommand.Parameters.Add("@CourseType", SqlDbType.VarChar).Value = EducationalObj.CourseType;
+                sqlCommand.Parameters.Add("@CourseSpecialization", SqlDbType.VarChar).Value = EducationalObj.CourseSpecialization;
+                sqlCommand.Parameters.Add("@CourseYear", SqlDbType.VarChar).Value = EducationalObj.CourseYearofPassing;
 
                 SqlParameter returnMessage = sqlCommand.CreateParameter();
                 returnMessage.ParameterName = "Message";
@@ -135,6 +138,53 @@ namespace PioneerTechSystem.DAL
             }
             CloseConnection(sqlConnection);
             return dataTable;
+        }
+
+        public List<Employee> ViewEmployeeData(string EmployeeID)
+        {
+            sqlConnection = OpenConnection();
+            EmployeeData = new List<Employee>();
+            string DisplayPersonalQuery = "SELECT FirstName, LastName, EmailID, MobileNumber, AddressState as State FROM EmployeePersonalDetails where EmployeeID = '" + EmployeeID + "'";
+            sqlCommand = new SqlCommand(DisplayPersonalQuery, sqlConnection);
+            SqlDataReader EmployeeDetailsReader = sqlCommand.ExecuteReader();
+            while (EmployeeDetailsReader.Read())
+            {
+                EmployeeData.Add(new Employee() { FirstName = EmployeeDetailsReader.GetString(EmployeeDetailsReader.GetOrdinal("FirstName")), LastName = EmployeeDetailsReader.GetString(EmployeeDetailsReader.GetOrdinal("LastName")), EmailID = EmployeeDetailsReader.GetString(EmployeeDetailsReader.GetOrdinal("EmailID")), MobileNumber = EmployeeDetailsReader.GetString(EmployeeDetailsReader.GetOrdinal("MobileNumber")), AddressState = EmployeeDetailsReader.GetString(EmployeeDetailsReader.GetOrdinal("LastName")) });
+            }
+            EmployeeDetailsReader.Close();
+            sqlCommand.Dispose();
+            CloseConnection(sqlConnection);
+            return EmployeeData;
+        }
+        public List<Company> ViewCompanyData(string EmployeeID)
+        {
+            sqlConnection = OpenConnection();
+            CompanyData = new List<Company>();
+            string DisplayCompanyQuery = "SELECT CompanyName, CompanyContactNumber, CompanyLocation, CompanyWebsite FROM EmployeeCompanyDetails where EmployeeID = '" + EmployeeID + "'";
+            sqlCommand = new SqlCommand(DisplayCompanyQuery, sqlConnection);
+            SqlDataReader CompanyDetailsReader = sqlCommand.ExecuteReader();
+            while (CompanyDetailsReader.Read())
+            {
+                CompanyData.Add(new Company() { CompanyName = CompanyDetailsReader.GetString(CompanyDetailsReader.GetOrdinal("CompanyName")), CompanyContactNumber = CompanyDetailsReader.GetString(CompanyDetailsReader.GetOrdinal("CompanyContactNumber")), CompanyLocation = CompanyDetailsReader.GetString(CompanyDetailsReader.GetOrdinal("CompanyLocation")), CompanyWebsite = CompanyDetailsReader.GetString(CompanyDetailsReader.GetOrdinal("CompanyWebsite")) });
+            }
+
+            CloseConnection(sqlConnection);
+            return CompanyData;
+        }
+        public List<Project> ViewProjectData(string EmployeeID)
+        {
+            sqlConnection = OpenConnection();
+            ProjectData = new List<Project>();
+            string DisplayProjectQuery = "SELECT ProjectName, ClientName, ProjectLocation, ProjectRoles FROM EmployeeProjectDetails where EmployeeID = '" + EmployeeID + "'";
+            sqlCommand = new SqlCommand(DisplayProjectQuery, sqlConnection);
+            SqlDataReader ProjectDetailsReader = sqlCommand.ExecuteReader();
+            while (ProjectDetailsReader.Read())
+            {
+                ProjectData.Add(new Project() { ProjectName = ProjectDetailsReader.GetString(ProjectDetailsReader.GetOrdinal("ProjectName")), ClientName = ProjectDetailsReader.GetString(ProjectDetailsReader.GetOrdinal("ClientName")), ProjectLocation = ProjectDetailsReader.GetString(ProjectDetailsReader.GetOrdinal("ProjectLocation")), ProjectRoles = ProjectDetailsReader.GetString(ProjectDetailsReader.GetOrdinal("ProjectRoles")) });
+            }
+
+            CloseConnection(sqlConnection);
+            return ProjectData;
         }
     }
 }

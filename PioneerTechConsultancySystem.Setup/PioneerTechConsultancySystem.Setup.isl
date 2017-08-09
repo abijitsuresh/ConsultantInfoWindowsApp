@@ -342,11 +342,12 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{ACCDC895-6BC7-4DB7-8258-6AC9DFC69746}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{3DEA69A7-ACEB-4991-A298-A5EF71FFFB8D}</td><td>CommonFilesFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PioneerTechConsultancySystem.exe</td><td>{34743EFA-D782-4092-9EF4-25C1D51DAEB1}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechconsultancysystem</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PioneerTechConsultancySystem.exe</td><td>{39681E4D-01A4-4E88-A064-736CA085E772}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechconsultancysystem</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>PioneerTechConsultancySystem.exe1</td><td>{AE0B8B37-DA44-46A0-9F2D-307D45B8B99A}</td><td>CommonFilesFolder</td><td>2</td><td/><td>pioneertechconsultancysystem6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PioneerTechConsultancySystem.vshost.exe</td><td>{66DC6AB6-61C0-4740-B069-D3387FA23B69}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechconsultancysystem3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PioneerTechSystem.DAL.dll</td><td>{F78E901C-D3A3-4C22-B3C2-88A28B9C5D36}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechsystem.dal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PioneerTechConsultancySystem.vshost.exe</td><td>{5E7E6B74-1011-4CE0-B027-E4F6B924D7DA}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechconsultancysystem3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PioneerTechSystem.DAL.dll</td><td>{8909F0B6-BED8-4692-B3AB-38322D5195F5}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechsystem.dal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>PioneerTechSystem.DAL.dll1</td><td>{45D2B875-D633-40AD-BFF5-F2CEB30C5D2B}</td><td>CommonFilesFolder</td><td>2</td><td/><td>pioneertechsystem.dal.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PioneerTechSystem.Models.dll</td><td>{1B9DD809-2110-4D8D-9216-B67E0F0A5BE5}</td><td>INSTALLDIR</td><td>2</td><td/><td>pioneertechsystem.models.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1066,6 +1067,7 @@
 		<row><td>INSTALLDIR</td><td>PioneerTechConsultancySystem.vshost.exe</td></row>
 		<row><td>INSTALLDIR</td><td>PioneerTechSystem.DAL.dll</td></row>
 		<row><td>INSTALLDIR</td><td>PioneerTechSystem.DAL.dll1</td></row>
+		<row><td>INSTALLDIR</td><td>PioneerTechSystem.Models.dll</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1891,6 +1893,7 @@
 		<row><td>AlwaysInstall</td><td>PioneerTechConsultancySystem.vshost.exe</td></row>
 		<row><td>AlwaysInstall</td><td>PioneerTechSystem.DAL.dll</td></row>
 		<row><td>AlwaysInstall</td><td>PioneerTechSystem.DAL.dll1</td></row>
+		<row><td>AlwaysInstall</td><td>PioneerTechSystem.Models.dll</td></row>
 	</table>
 
 	<table name="File">
@@ -1916,6 +1919,8 @@
 		<row><td>pioneertechsystem.dal.dll</td><td>PioneerTechSystem.DAL.dll</td><td>PIONEE~1.DLL|PioneerTechSystem.DAL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Abijit\Documents\Visual Studio 2015\Projects\PioneerTechConsultancySystem\PioneerTechConsultancySystem\bin\Release\PioneerTechSystem.DAL.dll</td><td>1</td><td/></row>
 		<row><td>pioneertechsystem.dal.dll1</td><td>PioneerTechSystem.DAL.dll1</td><td>PIONEE~1.DLL|PioneerTechSystem.DAL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Abijit\Documents\Visual Studio 2015\Projects\PioneerTechConsultancySystem\PioneerTechConsultancySystem\bin\Release\PioneerTechSystem.DAL.dll</td><td>1</td><td/></row>
 		<row><td>pioneertechsystem.dal.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>PIONEE~1.PDB|PioneerTechSystem.DAL.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Abijit\Documents\Visual Studio 2015\Projects\PioneerTechConsultancySystem\PioneerTechConsultancySystem\bin\Release\PioneerTechSystem.DAL.pdb</td><td>1</td><td/></row>
+		<row><td>pioneertechsystem.models.dll</td><td>PioneerTechSystem.Models.dll</td><td>PIONEE~1.DLL|PioneerTechSystem.Models.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Abijit\Documents\Visual Studio 2015\Projects\PioneerTechConsultancySystem\PioneerTechConsultancySystem\bin\Release\PioneerTechSystem.Models.dll</td><td>1</td><td/></row>
+		<row><td>pioneertechsystem.models.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>PIONEE~1.PDB|PioneerTechSystem.Models.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Abijit\Documents\Visual Studio 2015\Projects\PioneerTechConsultancySystem\PioneerTechConsultancySystem\bin\Release\PioneerTechSystem.Models.pdb</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2060,11 +2065,12 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_E4494335_BAE7_48B7_B540_5CDF9CC3D969_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_5C50898D_CFF4_4D8B_B564_2C7D4A414D44_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PioneerTechConsultancySystem.exe</td><td/><td/><td>_999651C1_4B9D_44BA_A6A6_573B0D543F80_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PioneerTechConsultancySystem.exe</td><td/><td/><td>_5D3BBEF4_5198_4EC2_B495_B5E5918C62AC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>PioneerTechConsultancySystem.exe1</td><td/><td/><td>_BF3B11BE_0157_4814_B47D_FF05E2D8FC60_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PioneerTechConsultancySystem.vshost.exe</td><td/><td/><td>_84F41A7F_9644_49CE_B509_9091C3B1F8CD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PioneerTechSystem.DAL.dll</td><td/><td/><td>_12658B6D_AC56_4F4D_925B_F23AE8021538_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PioneerTechConsultancySystem.vshost.exe</td><td/><td/><td>_3DCED835_95F8_40E2_BE75_BB02A765656B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PioneerTechSystem.DAL.dll</td><td/><td/><td>_C785FA8E_7873_49AE_9D22_A6F28F4CABAA_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>PioneerTechSystem.DAL.dll1</td><td/><td/><td>_06746646_0371_4889_958E_0F8CFA25CF66_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PioneerTechSystem.Models.dll</td><td/><td/><td>_4747F282_E700_4D59_8050_9E3EE649414F_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3470,6 +3476,7 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>1143310607</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1143310607</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>1143331279</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td>LAUNCH~1.EXE|Launch PioneerTechConsultancySystem.vshost.exe</td><td>0</td><td/><td>1277497426</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch PioneerTechConsultancySystem.exe</td><td>0</td><td/><td>1143309327</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch PioneerTechConsultancySystem.vshost.exe</td><td>0</td><td/><td>1143309327</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>PioneerTech.exe</td><td>0</td><td/><td>1143293103</td></row>
@@ -3477,6 +3484,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch PioneerTechConsultancySystem.exe</td><td>0</td><td/><td>1143334287</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>PioneerTechConsultancySystem.exe</td><td>0</td><td/><td>1143290480</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td>LAUNCH~1.EXE|Launch PioneerTechConsultancySystem.vshost.exe</td><td>0</td><td/><td>1143280240</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>LAUNCH~1.EXE|Launch PioneerTechConsultancySystem.exe</td><td>0</td><td/><td>1277497426</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1143310607</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1143310607</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1143310607</td></row>
@@ -3883,9 +3891,11 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>PioneerTechConsult_27618794C28E46048F3AE9F0C9D1C398.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PioneerTechConsult_75553E2ABAFF4C5A9594C15518CB6CEE.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PioneerTechConsult_865EBBF560B248E19BD97D6411B00962.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PioneerTechConsult_9EDF24CEC0034E39983BEA6AE4F91790.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>PioneerTechConsult_C4E2FFE3016F4523BFD872E7FAE02D5F.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PioneerTechConsult_ED08943339A84FBE91CA3E0CF78391B0.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PioneerTechConsult_FFB4F4A4286C442E9F91505248F90AE4.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
@@ -4475,6 +4485,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="i2">InstallMode</col>
 		<row><td>FileKey1</td><td>PioneerTechConsultancySystem.exe1</td><td/><td>consul_1_consultancysystem</td><td>2</td></row>
 		<row><td>PioneerTechConsultancySystem.exe</td><td>PioneerTechConsultancySystem.exe</td><td/><td>consul_1_consultancysystem</td><td>2</td></row>
+		<row><td>PioneerTechConsultancySystem.vshost.exe</td><td>PioneerTechConsultancySystem.vshost.exe</td><td/><td>consul_1_consultancysystem</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4560,7 +4571,8 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>PioneerTechConsultancySystem.exe</td><td>consul_1_consultancysystem</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>PioneerTechConsultancySystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PioneerTechConsult_865EBBF560B248E19BD97D6411B00962.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PioneerTechConsultancySystem.exe</td><td>consul_1_consultancysystem</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>PioneerTechConsultancySystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PioneerTechConsult_C4E2FFE3016F4523BFD872E7FAE02D5F.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PioneerTechConsultancySystem.vshost.exe</td><td>consul_1_consultancysystem</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>PioneerTechConsultancySystem.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PioneerTechConsult_27618794C28E46048F3AE9F0C9D1C398.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

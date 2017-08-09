@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PioneerTechSystem.DAL;
+using PioneerTechSystem.Models;
 
 namespace PioneerTechConsultancySystem
 {
@@ -20,21 +21,24 @@ namespace PioneerTechConsultancySystem
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            //EmployeeDetails EmployeeDetailsObj = new EmployeeDetails();
             //this.Hide();
-            //EmployeeDetailsObj.Show();
+            //HomeScreen HomeScreenObj = new HomeScreen();
+            //HomeScreenObj.Show(); 
+            Login LoginObj = new Login();
+            LoginObj.LoginID = LoginIdTextBox.Text;
+            LoginObj.Password = PasswordTextBox.Text;
 
             string loginId = LoginIdTextBox.Text;
             string password = PasswordTextBox.Text;
 
-            EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();            
-            
-            if (EmployeeDataAccessLayerObj.loginCheck(loginId, password) == 1)
+            EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();
+
+            if (EmployeeDataAccessLayerObj.loginCheck(LoginObj) == 1)
             {
                 MessageBox.Show("Login Success");
                 this.Hide();
                 HomeScreen HomeScreenObj = new HomeScreen();
-                HomeScreenObj.Show();                
+                HomeScreenObj.Show();
             }
             else
                 MessageBox.Show("Login Failed. Enter Correct details.");

@@ -8,29 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PioneerTechSystem.DAL;
+using PioneerTechSystem.Models;
 
 namespace PioneerTechConsultancySystem
 {
     public partial class EmployeeDetails : Form
     {
-        private string FName, LName, EmailID, MobileNumber, AlternateMobileNumber, AddressLine1, AddressLine2, State, Country, HomeCountry, ZipCode;
-        private string CompanyName, CompanyContactNumber, CompanyLocation, CompanyWebsite;
-        private string ProjectName, ClientName, ProjectLocation, ProjectRoles;
-        private string ProgrammingLanguages, Databases, ORMTechnologies, UITechnologies;
-        private string CourseType, CourseSpecification, CourseYearOfPassing;
+        public Employee EmployeeObj;
+        public Company CompanyObj;
+        public Project ProjectObj;
+        public Technical TechnicalObj;
+        public Educational EducationalObj;        
+
+        private void EmployeeDetails_Load(object sender, EventArgs e)
+        {
+            EmployeeObj = new Employee();
+            CompanyObj = new Company();
+            ProjectObj = new Project();
+            TechnicalObj = new Technical();
+            EducationalObj = new Educational();
+        }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            CourseType = CourseTypeTextBox.Text;
-            CourseSpecification = CourseSpecializationTextBox.Text;
-            CourseYearOfPassing = CourseYearTextBox.Text;
+            EducationalObj.CourseType = CourseTypeTextBox.Text;
+            EducationalObj.CourseSpecialization = CourseSpecializationTextBox.Text;
+            EducationalObj.CourseYearofPassing = CourseYearTextBox.Text;
             try
             {
-                EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();  
-                string status = EmployeeDataAccessLayerObj.InsertConsultantDetails(FName, LName, EmailID, MobileNumber, AlternateMobileNumber, AddressLine1, AddressLine2, State, Country, ZipCode, HomeCountry, CompanyName, CompanyContactNumber, CompanyLocation, CompanyWebsite, ProgrammingLanguages, Databases, ORMTechnologies, UITechnologies, ProjectName, ClientName, ProjectLocation, ProjectRoles, CourseType, CourseSpecification, CourseYearOfPassing);
+                
+                EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer(); 
+                string status = EmployeeDataAccessLayerObj.InsertConsultantDetails(EmployeeObj, ProjectObj, CompanyObj, TechnicalObj, EducationalObj);
                 if(status.Equals("success"))
                 {
-                    if (MessageBox.Show("Successfully Inserted values!!", "OK", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    if (MessageBox.Show("Successfully Inserted values!!", "OK", MessageBoxButtons.OK) == DialogResult.OK)
                     {
                         this.Hide();
                         HomeScreen HomeScreenObj = new HomeScreen();
@@ -83,17 +94,17 @@ namespace PioneerTechConsultancySystem
 
         private void PersonalContinueButton_Click(object sender, EventArgs e)
         {
-            FName = FNameTextBox.Text;
-            LName = LNameTextBox.Text;
-            EmailID = EmailIDTextBox.Text;
-            MobileNumber = MobileNumberTextBox.Text;
-            AlternateMobileNumber = AlternateMobNumTextBox.Text;
-            AddressLine1 = AddressLine1TextBox.Text;
-            AddressLine2 = AddressLine2TextBox.Text;
-            State = StateTextBox.Text;
-            Country = CountryTextBox.Text;
-            HomeCountry = HomeCountryTextBox.Text;
-            ZipCode = ZipCodeTextBox.Text;
+            EmployeeObj.FirstName = FNameTextBox.Text;            
+            EmployeeObj.LastName = LNameTextBox.Text;
+            EmployeeObj.EmailID = EmailIDTextBox.Text;
+            EmployeeObj.MobileNumber = MobileNumberTextBox.Text;
+            EmployeeObj.AlternateMobileNumber = AlternateMobNumTextBox.Text;
+            EmployeeObj.AddressLine1 = AddressLine1TextBox.Text;
+            EmployeeObj.AddressLine2 = AddressLine2TextBox.Text;
+            EmployeeObj.AddressState = StateTextBox.Text;
+            EmployeeObj.AddressCountry = CountryTextBox.Text;
+            EmployeeObj.HomeCountry = HomeCountryTextBox.Text;
+            EmployeeObj.AddressZipCode = ZipCodeTextBox.Text;
             selectTab(1);
         }
 
@@ -104,15 +115,16 @@ namespace PioneerTechConsultancySystem
 
         private void CompanyDetailsResetButton_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(CompanyObj.CompanyName);
             reset(CompanyDetailsTab.Controls);            
         }
 
         private void CompanyDetailsContinueButton_Click(object sender, EventArgs e)
         {
-            CompanyName = EmployerNameTextBox.Text;
-            CompanyContactNumber = CompanyContactNumberTextBox.Text;
-            CompanyLocation = CompanyLocationTextBox.Text;
-            CompanyWebsite = CompanyWebsiteTextBox.Text;
+            CompanyObj.CompanyName = EmployerNameTextBox.Text;
+            CompanyObj.CompanyContactNumber = CompanyContactNumberTextBox.Text;
+            CompanyObj.CompanyLocation = CompanyLocationTextBox.Text;
+            CompanyObj.CompanyWebsite = CompanyWebsiteTextBox.Text;
             selectTab(2);           
         }
 
@@ -123,10 +135,10 @@ namespace PioneerTechConsultancySystem
 
         private void TechContinueButton_Click(object sender, EventArgs e)
         {
-            ProgrammingLanguages = PgmLangTextBox.Text;
-            Databases = DbTextBox.Text;
-            ORMTechnologies = ORMTechTextBox.Text;
-            UITechnologies = UITextBox.Text;
+            TechnicalObj.ProgrammingLanguages = PgmLangTextBox.Text;
+            TechnicalObj.DatabasesKnown = DbTextBox.Text;
+            TechnicalObj.ORMTechnologies = ORMTechTextBox.Text;
+            TechnicalObj.UITechnologies = UITextBox.Text;
             selectTab(3);            
         }
 
@@ -143,10 +155,10 @@ namespace PioneerTechConsultancySystem
 
         private void ProjectContinueButton_Click(object sender, EventArgs e)
         {
-            ProjectName = ProjectNameTextBox.Text;
-            ClientName = ClientNameTextBox.Text;
-            ProjectLocation = ProjectLocationTextBox.Text;
-            ProjectRoles = ProjectRolesTextBox.Text;
+            ProjectObj.ProjectName = ProjectNameTextBox.Text;
+            ProjectObj.ClientName = ClientNameTextBox.Text;
+            ProjectObj.ProjectLocation = ProjectLocationTextBox.Text;
+            ProjectObj.ProjectRoles = ProjectRolesTextBox.Text;
             selectTab(4);
         }
 

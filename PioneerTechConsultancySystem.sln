@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTechSystem.DAL", "Pi
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "PioneerTechConsultancySystem.Setup", "PioneerTechConsultancySystem.Setup\PioneerTechConsultancySystem.Setup.isproj", "{B61AEEBD-A66A-4B51-8744-C27049805BC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTechSystem.Models", "PioneerTechSystem.Models\PioneerTechSystem.Models.csproj", "{64221C86-4B55-475D-831E-4FD433801A08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -48,6 +50,16 @@ Global
 		{B61AEEBD-A66A-4B51-8744-C27049805BC9}.Release|Any CPU.Build.0 = SingleImage
 		{B61AEEBD-A66A-4B51-8744-C27049805BC9}.SingleImage|Any CPU.ActiveCfg = SingleImage
 		{B61AEEBD-A66A-4B51-8744-C27049805BC9}.SingleImage|Any CPU.Build.0 = SingleImage
+		{64221C86-4B55-475D-831E-4FD433801A08}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{64221C86-4B55-475D-831E-4FD433801A08}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

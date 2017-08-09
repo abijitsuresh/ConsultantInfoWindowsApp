@@ -113,6 +113,10 @@
       <Project>{4379d4af-7347-4ecf-92d8-451991a35c52}</Project>
       <Name>PioneerTechSystem.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PioneerTechSystem.Models\PioneerTechSystem.Models.csproj">
+      <Project>{64221c86-4b55-475d-831e-4fd433801a08}</Project>
+      <Name>PioneerTechSystem.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

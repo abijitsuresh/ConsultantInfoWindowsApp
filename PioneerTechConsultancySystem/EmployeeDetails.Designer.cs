@@ -811,6 +811,7 @@
             this.Name = "EmployeeDetails";
             this.Text = "Pioneer Tech Consultancy System - Employee Details";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmployeeDetails_FormClosed);
+            this.Load += new System.EventHandler(this.EmployeeDetails_Load);
             this.EmplDetailsTabControl.ResumeLayout(false);
             this.PersonalDetailsTab.ResumeLayout(false);
             this.PersonalDetailsTab.PerformLayout();
