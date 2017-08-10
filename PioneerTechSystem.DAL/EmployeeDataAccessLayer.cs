@@ -110,36 +110,6 @@ namespace PioneerTechSystem.DAL
         }
 
         // To Display values        
-        public DataTable ViewConsultantData(string EmployeeID, string Operation)
-        {
-            sqlConnection = OpenConnection();
-            dataTable = new DataTable();
-            string DisplayPersonalQuery = "SELECT FirstName, LastName, EmailID, MobileNumber, AddressState as State FROM EmployeePersonalDetails where EmployeeID = '" + EmployeeID + "'";
-            string DisplayCompanyQuery = "SELECT CompanyName as [Company Name], CompanyContactNumber as [Company Contact Number], CompanyLocation as Location, CompanyWebsite as Website FROM EmployeeCompanyDetails where EmployeeID = '" + EmployeeID + "'";
-            string DisplayProjectQuery = "SELECT ProjectName as [Project Name], ClientName as [Client Name], ProjectLocation as [Project Location], ProjectRoles as [Project Roles] FROM EmployeeProjectDetails where EmployeeID = '" + EmployeeID + "'";
-            if (Operation.Equals("DisplayPersonal"))
-            {                
-                DataAdapter = new SqlDataAdapter(DisplayPersonalQuery, sqlConnection);
-                DataAdapter.Fill(dataTable);
-            }
-            else if (Operation.Equals("DisplayCompany"))
-            {
-                dataTable.Clear();
-                DataAdapter.Dispose();
-                DataAdapter = new SqlDataAdapter(DisplayCompanyQuery, sqlConnection);
-                DataAdapter.Fill(dataTable);
-            }
-            else
-            {
-                dataTable.Clear();
-                DataAdapter.Dispose();
-                DataAdapter = new SqlDataAdapter(DisplayProjectQuery, sqlConnection);
-                DataAdapter.Fill(dataTable);
-            }
-            CloseConnection(sqlConnection);
-            return dataTable;
-        }
-
         public List<Employee> ViewEmployeeData(string EmployeeID)
         {
             sqlConnection = OpenConnection();
@@ -154,6 +124,7 @@ namespace PioneerTechSystem.DAL
             EmployeeDetailsReader.Close();
             sqlCommand.Dispose();
             CloseConnection(sqlConnection);
+            //EmployeeData = EmployeeData.Where(data => data != null).ToList();
             return EmployeeData;
         }
         public List<Company> ViewCompanyData(string EmployeeID)

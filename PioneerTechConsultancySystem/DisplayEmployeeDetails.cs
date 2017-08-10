@@ -24,7 +24,7 @@ namespace PioneerTechConsultancySystem
             {
                 EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();
 
-                PersonalDetailsGridView.DataSource = EmployeeDataAccessLayerObj.ViewEmployeeData(EmployeeID);                
+                PersonalDetailsGridView.DataSource = EmployeeDataAccessLayerObj.ViewEmployeeData(EmployeeID);
                 PersonalDetailsGridView.Columns.RemoveAt(0);
                 for (int i = 0; i < PersonalDetailsGridView.ColumnCount; i++)
                 {
@@ -35,7 +35,7 @@ namespace PioneerTechConsultancySystem
                         i = 0;
                     }
                 }
-                
+
                 CompanyDetailsGridView.DataSource = EmployeeDataAccessLayerObj.ViewCompanyData(EmployeeID);
 
                 CompanyDetailsGridView.Columns.RemoveAt(0);
