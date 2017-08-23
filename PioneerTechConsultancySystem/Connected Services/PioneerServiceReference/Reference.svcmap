@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="40a66c9b-ab0a-4d9c-829a-499e93a05f0f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53979/PioneerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PioneerService2.xsd" MetadataType="Schema" ID="f0add13e-7bd1-43ea-a7a9-8734f49523ae" SourceId="1" SourceUrl="http://localhost:53979/PioneerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PioneerService.wsdl" MetadataType="Wsdl" ID="6faf7750-f1df-4dde-ac66-9afaa347d748" SourceId="1" SourceUrl="http://localhost:53979/PioneerService.svc?wsdl" />
+    <MetadataFile FileName="PioneerService.xsd" MetadataType="Schema" ID="d19a9d6a-cf30-470b-ab53-65251da04b02" SourceId="1" SourceUrl="http://localhost:53979/PioneerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PioneerService.disco" MetadataType="Disco" ID="13679e18-3af7-4f16-b4fd-bca794f1263f" SourceId="1" SourceUrl="http://localhost:53979/PioneerService.svc?disco" />
+    <MetadataFile FileName="PioneerService1.xsd" MetadataType="Schema" ID="83b10b30-a487-4635-8ffc-14c19a513bf4" SourceId="1" SourceUrl="http://localhost:53979/PioneerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PioneerService3.xsd" MetadataType="Schema" ID="7e515362-0a1f-4b5a-a365-4865b612b539" SourceId="1" SourceUrl="http://localhost:53979/PioneerService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

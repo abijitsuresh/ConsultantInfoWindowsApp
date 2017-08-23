@@ -1,15 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTechConsultancySystem", "PioneerTechConsultancySystem\PioneerTechConsultancySystem.csproj", "{C75BCC1E-0C96-4721-8031-FEDE81369055}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A721267-F558-446D-A72A-2F593B8209A7} = {5A721267-F558-446D-A72A-2F593B8209A7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTechSystem.DAL", "PioneerTechSystem.DAL\PioneerTechSystem.DAL.csproj", "{4379D4AF-7347-4ECF-92D8-451991A35C52}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "PioneerTechConsultancySystem.Setup", "PioneerTechConsultancySystem.Setup\PioneerTechConsultancySystem.Setup.isproj", "{B61AEEBD-A66A-4B51-8744-C27049805BC9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTechSystem.Models", "PioneerTechSystem.Models\PioneerTechSystem.Models.csproj", "{64221C86-4B55-475D-831E-4FD433801A08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.WCFService", "PioneerTech.WCFService\PioneerTech.WCFService.csproj", "{5A721267-F558-446D-A72A-2F593B8209A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,8 +65,21 @@ Global
 		{64221C86-4B55-475D-831E-4FD433801A08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64221C86-4B55-475D-831E-4FD433801A08}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{64221C86-4B55-475D-831E-4FD433801A08}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{5A721267-F558-446D-A72A-2F593B8209A7}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D27A4209-93BB-4FD6-862B-06B83C8E981B}
 	EndGlobalSection
 EndGlobal

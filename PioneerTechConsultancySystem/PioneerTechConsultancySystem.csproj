@@ -36,6 +36,8 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\PioneerServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DisplayEmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +102,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\PioneerServiceReference\PioneerService.wsdl" />
+    <None Include="Connected Services\PioneerServiceReference\PioneerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PioneerServiceReference\PioneerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PioneerServiceReference\PioneerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PioneerServiceReference\PioneerService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PioneerServiceReference\PioneerTechConsultancySystem.PioneerServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +140,27 @@
       <Project>{64221c86-4b55-475d-831e-4fd433801a08}</Project>
       <Name>PioneerTechSystem.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PioneerServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PioneerServiceReference\PioneerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PioneerServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PioneerServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PioneerServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
