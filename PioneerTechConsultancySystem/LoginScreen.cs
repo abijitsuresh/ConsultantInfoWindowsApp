@@ -24,12 +24,18 @@ namespace PioneerTechConsultancySystem
             //this.Hide();
             //HomeScreen HomeScreenObj = new HomeScreen();
             //HomeScreenObj.Show(); 
+            int returnValue;
             Login LoginObj = new Login();
             LoginObj.LoginID = LoginIdTextBox.Text;
             LoginObj.Password = PasswordTextBox.Text;
-            
+
+            //EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();
+            //returnValue = EmployeeDataAccessLayerObj.loginCheck(LoginObj);
+
+
             PioneerServiceReference.PioneerServiceClient serviceClient = new PioneerServiceReference.PioneerServiceClient();
-            if (serviceClient.loginCheck(LoginObj) == 1)
+            returnValue = serviceClient.loginCheck(LoginObj);
+            if (returnValue == 1)
             {
                 MessageBox.Show("Login Success");
                 this.Hide();

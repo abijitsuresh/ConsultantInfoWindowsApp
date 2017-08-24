@@ -17,9 +17,6 @@ namespace PioneerTech.WCFService
         [OperationContract]
         int loginCheck(Login loginObj);
 
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
         // TODO: Add your service operations here
     }
 

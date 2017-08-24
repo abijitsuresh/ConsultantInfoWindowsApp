@@ -15,31 +15,10 @@ namespace PioneerTech.WCFService
     public class PioneerService : IPioneerService
     {
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }
-        
-
         public int loginCheck(Login loginObj)
         {            
             EmployeeDataAccessLayer EmployeeDataAccessLayerObj = new EmployeeDataAccessLayer();
-            int returnValue;
-            if (EmployeeDataAccessLayerObj.loginCheck(loginObj) == 1)
-            {
-                returnValue = 1;
-            }
-            else
-                returnValue = 0;
-            return returnValue;
+            return(EmployeeDataAccessLayerObj.loginCheck(loginObj));
         }
     }
 }
